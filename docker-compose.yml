@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    image: node:alpine
+    restart: always
+    build: .
+    ports:
+      - "5000:5000/tcp"
+  mongo:
+    image: mongo:3.6
+    ports:
+      - "27017:27017"
